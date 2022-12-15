@@ -1,0 +1,23 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "server for test task",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "node index.js",
+		"serve": "nodemon index.js"
+	},
+	"author": "vharlamov <valera545@gmail.com>",
+	"license": "ISC",
+	"dependencies": {
+		"@types/yargs": "^17.0.17",
+		"chalk": "^5.2.0",
+		"del": "^6.1.1",
+		"esm": "^3.2.25",
+		"yargs": "^17.6.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.20"
+	}
+}
