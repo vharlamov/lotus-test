@@ -8,7 +8,7 @@ import path from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const PORT = 8080
+const PORT = 8040
 
 const app = express()
 
