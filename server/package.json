@@ -6,15 +6,18 @@
 	"type": "module",
 	"scripts": {
 		"start": "node index.js",
-		"serve": "nodemon index.js"
+		"serve": "nodemon index.js",
+		"build": "npm run build"
 	},
 	"author": "vharlamov <valera545@gmail.com>",
 	"license": "ISC",
 	"dependencies": {
 		"@types/yargs": "^17.0.17",
 		"chalk": "^5.2.0",
+		"cors": "^2.8.5",
 		"del": "^6.1.1",
 		"esm": "^3.2.25",
+		"express": "^4.18.2",
 		"yargs": "^17.6.2"
 	},
 	"devDependencies": {
