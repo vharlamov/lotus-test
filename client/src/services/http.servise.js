@@ -3,13 +3,18 @@ import endpoint from '../config'
 
 const http = axios.create({ baseURL: endpoint })
 
-http.interceptors.request.use(async (config) => {
-	config.headers = {
-		...config.headers,
-		'Access-Control-Allow-Origin': '*',
-		'Access-Control-Allow-Metods': '*',
-	}
-})
+http.interceptors.request.use(
+	async (config) => {
+		console.log('config.headers', config.headers)
+		config.headers = {
+			...config.headers,
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Metods': '*',
+		}
+		return config
+	},
+	(error) => Promise.reject(error)
+)
 
 const httpService = {
 	get: http.get,

@@ -32,9 +32,6 @@ if (process.env.NODE_ENV === 'production') {
 		res.setHeader('Access-Control-Allow-Method', 'GET').send(time.toString())
 	})
 }
-// app.get('/time', (req, res) => {
-// 	res.send(time.toString())
-// })
 
 app.listen(PORT, () => {
 	console.log(
