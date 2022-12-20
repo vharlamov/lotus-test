@@ -72,7 +72,7 @@ const Table = ({ current, time, users }) => {
 						<td key={i} className='cell'>
 							<p className='cellP blue'>{u.cost.initial}</p>
 						</td>
-					))}{' '}
+					))}
 				</tr>
 
 				<tr className='bgGrey'>

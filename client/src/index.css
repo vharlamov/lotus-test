@@ -1,5 +1,14 @@
 body {
 	font-family: 'Roboto';
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
 }
 
 .topMessage {

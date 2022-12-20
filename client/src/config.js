@@ -4,4 +4,4 @@ const config = {
 	fozzy: 'http://23.111.202.40:83/',
 }
 
-export default config.fozzy
+export default config.local

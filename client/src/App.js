@@ -28,13 +28,13 @@ function App() {
 	}, [])
 
 	return (
-		<>
+		<div className='container'>
 			<h3 className='topMessage green'>
 				Уважаемые участники, во время вашего хода вы можете изменить параметры
 				торгов, указанных в таблице:
 			</h3>
 			<Table current={current} time={time} users={users} />
-		</>
+		</div>
 	)
 }
 
