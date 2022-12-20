@@ -25,16 +25,8 @@ if (process.env.NODE_ENV === 'production') {
 	app.get('/', (req, res) => {
 		res.sendFile(indexPath)
 	})
-
-	// 	app.get('/time', (req, res) => {
-	// 		res.send({ time, current, length })
-	// 	})
-	//
-	// 	app.get('/users', (req, res) => {
-	// 		res.send(users)
-	// 	})
-} else {
 }
+
 app.get('/time', (req, res) => {
 	res
 		.setHeader('Access-Control-Allow-Method', 'GET')
