@@ -5,7 +5,6 @@ const http = axios.create({ baseURL: endpoint })
 
 http.interceptors.request.use(
 	async (config) => {
-		console.log('config.headers', config.headers)
 		config.headers = {
 			...config.headers,
 			'Access-Control-Allow-Origin': '*',

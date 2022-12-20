@@ -3,8 +3,10 @@ import express from 'express'
 import cors from 'cors'
 import chalk from 'chalk'
 import { time, startTime } from './utils/timeGen.js'
+import { current, currentGen, length } from './utils/currentGen.js'
 import path from 'path'
 import config from 'config'
+import users from './db/users.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -24,14 +26,24 @@ if (process.env.NODE_ENV === 'production') {
 		res.sendFile(indexPath)
 	})
 
-	app.get('/time', (req, res) => {
-		res.send(time.toString())
-	})
+	// 	app.get('/time', (req, res) => {
+	// 		res.send({ time, current, length })
+	// 	})
+	//
+	// 	app.get('/users', (req, res) => {
+	// 		res.send(users)
+	// 	})
 } else {
-	app.get('/time', (req, res) => {
-		res.setHeader('Access-Control-Allow-Method', 'GET').send(time.toString())
-	})
 }
+app.get('/time', (req, res) => {
+	res
+		.setHeader('Access-Control-Allow-Method', 'GET')
+		.send({ time, current, length })
+})
+
+app.get('/users', (req, res) => {
+	res.send(users)
+})
 
 app.listen(PORT, () => {
 	console.log(
